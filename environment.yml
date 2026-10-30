@@ -1,7 +1,7 @@
-# QT4HEP conda ortamı (Miniforge / conda-forge)
-# Kurulum:      conda env create -f environment.yml
-# Güncelleme:   conda env update -f environment.yml --prune
-# Kesin sürümler: notes/requirements-lock.txt
+# QT4HEP conda environment (Miniforge / conda-forge)
+# Create:  conda env create -f environment.yml
+# Update:  conda env update -f environment.yml --prune
+# Exact versions: notes/requirements-lock.txt
 name: qt4hep
 channels:
   - conda-forge

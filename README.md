@@ -1,32 +1,32 @@
 # QT4HEP — Quantum Data Encoding for CMS Jets
 
-Zeynep Sağlam · İstanbul Teknik Üniversitesi, Fizik Mühendisliği
-Danışman: Altan Çakır
+Zeynep Sağlam · Istanbul Technical University, Department of Physics Engineering
+Supervisor: Altan Çakır
 
-CERN QT4HEP posteri (24 Kasım 2026) ve yüksek lisans tezi için çalışma deposu.
-Rekonstrükte CMS jetlerinde (pT, η, ϕ, m) Angle ve Amplitude encoding karşılaştırması,
-L2 normalizasyonunun yol açtığı "state collapse" ve fizik güdümlü encoding stratejileri.
+Working repository for the CERN QT4HEP poster (24 November 2026) and the MSc thesis.
+Comparison of angle and amplitude encoding on reconstructed CMS jets (pT, η, ϕ, m),
+the "state collapse" caused by L2 normalization, and physics-driven encoding strategies.
 
-## Klasör yapısı
+## Repository structure
 
-| Klasör | İçerik |
+| Folder | Contents |
 | --- | --- |
-| `Data/` | Ham veri (Git'e girmez) |
-| `src/` | Yeniden kullanılabilir Python kodu (veri okuma, encoding, metrikler) |
-| `notebooks/` | Keşif ve figür notebook'ları |
-| `figures/` | Poster ve tez figürleri |
-| `notes/` | Araştırma günlüğü, sürüm kaydı |
-| `docs/` | Özet, poster taslakları |
-| `references.bib` | Kaynakça (BibTeX) |
+| `Data/` | Raw data (not tracked by Git) |
+| `src/` | Reusable Python code (data loading, encodings, metrics) |
+| `notebooks/` | Exploration and figure notebooks |
+| `figures/` | Poster and thesis figures |
+| `notes/` | Research log, environment lock file |
+| `docs/` | Abstract, poster drafts |
+| `references.bib` | Bibliography (BibTeX) |
 
-## Kurulum
+## Setup
 
 ```bash
 conda env create -f environment.yml
 conda activate qt4hep
 ```
 
-## Veri
+## Data
 
 CMS Open Data, record 12100 — DOI: 10.7483/OPENDATA.CMS.RY2V.T797
 

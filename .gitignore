@@ -1,4 +1,4 @@
-# Veri (büyük dosyalar Git'e girmez; README'deki indirme komutuyla tekrar indirilir)
+# Data (large files are not tracked; re-download with the command in README.md)
 Data/
 *.h5
 *.root

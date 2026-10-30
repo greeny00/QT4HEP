@@ -1,22 +1,22 @@
 % =====================================================================
-% QT4HEP — Kaynakça (BibTeX)
-% Zeynep Sağlam · İTÜ Fizik Mühendisliği · Tez + CERN posteri
+% QT4HEP — Bibliography (BibTeX)
+% Zeynep Sağlam · ITU Physics Engineering · MSc thesis + CERN poster
 %
-% Kullanım:
+% Usage:
 %   - LaTeX: \bibliography{references}  ->  \cite{thanasilp2024}
 %   - Zotero: File > Import... > references.bib
-%   - Her kaydın "note" alanı: kaynağın projede NEREDE ve NE İÇİN kullanıldığı.
-%   - Yeni kaynak eklerken aynı biçimi koru: anahtar = ilkyazarYIL
+%   - The "note" field of each entry: where and why the source is used in this project.
+%   - New entries: keep the same format, key = firstauthorYEAR
 %
-% Bölümler: 1) Veri  2) Encoding ve QML teorisi  3) Durum hazırlama devreleri
-%           4) Jet fiziği ve fizik güdümlü encoding  5) Ön işleme ve yöntem
-%           6) Yazılım
-% Son güncelleme: 2026-10-30
+% Sections: 1) Data  2) Encoding and QML theory  3) State preparation circuits
+%           4) Jet physics and physics-driven encodings  5) Preprocessing and methodology
+%           6) Software
+% Last updated: 2026-10-30
 % =====================================================================
 
 
 % ---------------------------------------------------------------------
-% 1) VERİ
+% 1) DATA
 % ---------------------------------------------------------------------
 
 @misc{kallonen2019jetntuple,
@@ -26,12 +26,12 @@
   year         = {2019},
   doi          = {10.7483/OPENDATA.CMS.RY2V.T797},
   url          = {https://opendata.cern.ch/record/12100},
-  note         = {Ana veri seti (record 12100). Kullanılan dosya: JetNtuple_RunIISummer16_13TeV_MC_1.h5. Pythia 8 + CMS dedektör simülasyonu, AK4 CHS jetler, pT > 30 GeV, |eta| < 2.5. Etiket: isPhysUDS / isPhysG (quark/gluon).}
+  note         = {Main dataset (record 12100). File used: JetNtuple_RunIISummer16_13TeV_MC_1.h5. Pythia 8 + full CMS detector simulation, AK4 CHS jets, pT > 30 GeV, |eta| < 2.5. Labels: isPhysUDS / isPhysG (quark/gluon).}
 }
 
 
 % ---------------------------------------------------------------------
-% 2) ENCODING VE QML TEORİSİ
+% 2) ENCODING AND QML THEORY
 % ---------------------------------------------------------------------
 
 @article{thanasilp2024,
@@ -42,7 +42,7 @@
   pages   = {5200},
   year    = {2024},
   doi     = {10.1038/s41467-024-49287-w},
-  note    = {Kernel konsantrasyonu. Dikkat: üstel konsantrasyon qubit sayısı n ile; bizdeki çöküş n=2 sabitken veri ölçeklemesinden doğuyor. Posterde "analog" olarak çerçevele.}
+  note    = {Kernel concentration. Caution: their exponential concentration is in the number of qubits n; our collapse arises from feature scaling at fixed n=2. Frame it as an analogue on the poster.}
 }
 
 @article{shaydulin2022bandwidth,
@@ -53,7 +53,7 @@
   pages   = {042407},
   year    = {2022},
   doi     = {10.1103/PhysRevA.106.042407},
-  note    = {Özellik ölçeklemesi = kernel bant genişliği. State collapse ve Robust + Yeo-Johnson için en yakın teorik analoji.}
+  note    = {Feature scaling acts as the kernel bandwidth. Closest theoretical analogue for state collapse and for the Robust + Yeo-Johnson fix.}
 }
 
 @article{schuld2021effect,
@@ -64,7 +64,7 @@
   pages   = {032430},
   year    = {2021},
   doi     = {10.1103/PhysRevA.103.032430},
-  note    = {Encoding modelin hipotez sınıfını (Fourier frekanslarını) belirler. "Darboğaz encoding'de" iddiasının teorik dayanağı.}
+  note    = {The encoding fixes the model's hypothesis class (accessible Fourier frequencies). Theoretical basis for the claim that the bottleneck is the encoding.}
 }
 
 @article{larose2020robust,
@@ -75,7 +75,7 @@
   pages   = {032420},
   year    = {2020},
   doi     = {10.1103/PhysRevA.102.032420},
-  note    = {Encoding seçimi karar sınırlarını ve gürültüye dayanıklılığı belirler. Angle vs amplitude karşılaştırması.}
+  note    = {Encoding choice determines learnable decision boundaries and noise robustness. Angle vs amplitude comparison.}
 }
 
 @article{perezsalinas2020reuploading,
@@ -86,7 +86,7 @@
   pages   = {226},
   year    = {2020},
   doi     = {10.22331/q-2020-02-06-226},
-  note    = {Qubit verimliliğine amplitude encoding dışında bir yol: derinlik/tekrar yükleme.}
+  note    = {An alternative route to qubit efficiency besides amplitude encoding: depth / data re-uploading.}
 }
 
 @book{schuld2021book,
@@ -96,7 +96,7 @@
   publisher = {Springer},
   year      = {2021},
   doi       = {10.1007/978-3-030-83098-4},
-  note      = {Basis / angle / amplitude encoding tanımları için standart ders kitabı.}
+  note      = {Standard textbook reference for basis / angle / amplitude encoding.}
 }
 
 @article{havlicek2019,
@@ -107,12 +107,12 @@
   pages   = {209--212},
   year    = {2019},
   doi     = {10.1038/s41586-019-0980-2},
-  note    = {ZZFeatureMap ve quantum kernel / VQC'nin temel makalesi; quantum kernel yöntemlerinin klasik referansı.}
+  note    = {Original ZZFeatureMap and quantum kernel / VQC paper; standard reference for quantum kernel methods.}
 }
 
 
 % ---------------------------------------------------------------------
-% 3) DURUM HAZIRLAMA DEVRELERİ (amplitude encoding)
+% 3) STATE PREPARATION CIRCUITS (amplitude encoding)
 % ---------------------------------------------------------------------
 
 @article{mottonen2005,
@@ -124,7 +124,7 @@
   pages   = {467--473},
   year    = {2005},
   eprint  = {quant-ph/0407010},
-  note    = {Düzgün kontrollü RY/RZ kaskadlarıyla durum hazırlama; CNOT maliyeti.}
+  note    = {State preparation with uniformly controlled RY/RZ cascades; CNOT cost.}
 }
 
 @article{shende2006synthesis,
@@ -136,7 +136,7 @@
   pages   = {1000--1010},
   year    = {2006},
   doi     = {10.1109/TCAD.2005.855930},
-  note    = {Eski Qiskit sürümlerinde StatePreparation/Initialize'ın kullandığı yinelemeli ayrışım.}
+  note    = {Recursive decomposition used by StatePreparation/Initialize in older Qiskit versions.}
 }
 
 @article{iten2016isometries,
@@ -147,12 +147,12 @@
   pages   = {032318},
   year    = {2016},
   doi     = {10.1103/PhysRevA.93.032318},
-  note    = {Güncel Qiskit StatePreparation'ın kullandığı Isometry sentezi. Posterde Qiskit sürümüyle birlikte belirt.}
+  note    = {Isometry synthesis used by current Qiskit StatePreparation. State it together with the Qiskit version on the poster.}
 }
 
 
 % ---------------------------------------------------------------------
-% 4) JET FİZİĞİ VE FİZİK GÜDÜMLÜ ENCODING
+% 4) JET PHYSICS AND PHYSICS-DRIVEN ENCODINGS
 % ---------------------------------------------------------------------
 
 @article{cacciari2008antikt,
@@ -164,7 +164,7 @@
   pages   = {063},
   year    = {2008},
   doi     = {10.1088/1126-6708/2008/04/063},
-  note    = {Veri setindeki jetler anti-kt R=0.4 ile kümelenmiş.}
+  note    = {Jets in the dataset are clustered with anti-kt, R=0.4.}
 }
 
 @article{dreyer2018lund,
@@ -177,7 +177,7 @@
   year    = {2018},
   doi     = {10.1007/JHEP12(2018)064},
   eprint  = {1807.04758},
-  note    = {LP2B'nin temeli: C/A declustering, ln(1/Delta), ln kt.}
+  note    = {Basis of LP2B: C/A declustering, ln(1/Delta), ln kt.}
 }
 
 @article{bal2025onep1q,
@@ -188,7 +188,7 @@
   pages   = {076004},
   year    = {2025},
   eprint  = {2502.17301},
-  note    = {1P1Q encoding: constituent başına bir qubit, pT/pT_jet ile modüle edilen Bloch açıları. Strateji (ii).}
+  note    = {1P1Q encoding: one qubit per constituent, Bloch angles modulated by pT/pT_jet. Strategy (ii).}
 }
 
 @misc{napolitano2026lp2b,
@@ -198,12 +198,12 @@
   eprint        = {2604.18613},
   archivePrefix = {arXiv},
   primaryClass  = {hep-ph},
-  note          = {LP2B + QTTN. Strateji (iii). Preprint: sonuçları "raporlanan" olarak aktar. BOOST 2026'da sunuldu.}
+  note          = {LP2B + QTTN. Strategy (iii). Preprint: quote results as reported. Presented at BOOST 2026.}
 }
 
 
 % ---------------------------------------------------------------------
-% 5) ÖN İŞLEME VE YÖNTEM
+% 5) PREPROCESSING AND METHODOLOGY
 % ---------------------------------------------------------------------
 
 @article{yeo2000,
@@ -215,7 +215,7 @@
   pages   = {954--959},
   year    = {2000},
   doi     = {10.1093/biomet/87.4.954},
-  note    = {Yeo-Johnson dönüşümü; negatif değerleri de kabul eder (eta, phi). Strateji (i).}
+  note    = {Yeo-Johnson transform; accepts negative values (eta, phi). Strategy (i).}
 }
 
 @article{sandve2013reproducible,
@@ -227,12 +227,12 @@
   pages   = {e1003285},
   year    = {2013},
   doi     = {10.1371/journal.pcbi.1003285},
-  note    = {Sabit seed, sürüm kaydı, araştırma günlüğü gerekçesi.}
+  note    = {Rationale for fixed seeds, version records and a research log.}
 }
 
 
 % ---------------------------------------------------------------------
-% 6) YAZILIM
+% 6) SOFTWARE
 % ---------------------------------------------------------------------
 
 @misc{javadiabhari2024qiskit,
@@ -242,7 +242,7 @@
   eprint        = {2405.08810},
   archivePrefix = {arXiv},
   primaryClass  = {quant-ph},
-  note          = {Qiskit'in önerilen atıf makalesi. Kullanılan sürümü notes/requirements-lock.txt'ten ekle.}
+  note          = {Recommended citation for Qiskit. Add the version used from notes/requirements-lock.txt.}
 }
 
 @article{pedregosa2011sklearn,
@@ -252,5 +252,5 @@
   volume  = {12},
   pages   = {2825--2830},
   year    = {2011},
-  note    = {RobustScaler, PowerTransformer, klasik baseline'lar, ROC/AUC.}
+  note    = {RobustScaler, PowerTransformer, classical baselines, ROC/AUC.}
 }
