@@ -1,0 +1,11 @@
+{
+  "python.defaultInterpreterPath": "/Users/zeynep/miniforge3/envs/qt4hep/bin/python",
+  "jupyter.notebookFileRoot": "${workspaceFolder}",
+  "python.terminal.activateEnvironment": true,
+  "files.exclude": {
+    "**/.DS_Store": true,
+    "**/__pycache__": true
+  },
+  "python-envs.defaultEnvManager": "ms-python.python:conda",
+  "python-envs.defaultPackageManager": "ms-python.python:conda"
+}

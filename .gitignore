@@ -1,0 +1,13 @@
+# Veri (büyük dosyalar Git'e girmez; README'deki indirme komutuyla tekrar indirilir)
+Data/
+*.h5
+*.root
+
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.venv/
+
+# macOS
+.DS_Store

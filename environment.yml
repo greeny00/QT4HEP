@@ -1,0 +1,23 @@
+# QT4HEP conda ortamı (Miniforge / conda-forge)
+# Kurulum:      conda env create -f environment.yml
+# Güncelleme:   conda env update -f environment.yml --prune
+# Kesin sürümler: notes/requirements-lock.txt
+name: qt4hep
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12
+  - pip
+  - pip:
+      - qiskit==2.6.1
+      - qiskit-machine-learning==0.9.1
+      - numpy==2.5.4
+      - scipy==1.18.1
+      - scikit-learn==1.9.1
+      - pandas==3.1.0
+      - h5py==3.16.0
+      - matplotlib==3.11.2
+      - uproot==5.7.7
+      - awkward==2.14.0
+      - cernopendata-client==1.0.2
+      - ipykernel
