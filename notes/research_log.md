@@ -29,3 +29,10 @@ Each session: date, commit, versions/seed, what worked, where I got stuck, open 
 - Mean P(|00>) GeV 0.983 vs TeV 0.086
 - Circuit check: max |SV - analytic| 1.1e-16; max |Sampler - analytic| 7.6e-04 (10000 shots)
 - Qiskit 2.6.1
+
+## 2026-11-03 — Session 3: Feature Selection
+
+- Single-feature separation AUC (train): jetQGl 0.791, QG_axis2 0.786, QG_ptD 0.766, jetGirth 0.763, jetPt 0.662, QG_mult 0.627, jetMult 0.620, jetMass 0.563, jetPhi 0.503, jetEta 0.502
+- Chosen features: QG_mult, QG_ptD, QG_axis2, jetGirth
+- Raw amplitude encoding on chosen features: median dominant probability 0.9997; fraction > 0.9: 1.000
+- Dominant state is QG_mult in 1.000 of jets
