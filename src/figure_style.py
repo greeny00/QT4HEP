@@ -14,6 +14,7 @@ COLORS = {
     "single": "#2a78d6",  # single-series default
     "series1": "#2a78d6",  # generic slot 1
     "series2": "#eb6834",  # generic slot 2
+    "series3": "#1baf7a",  # generic slot 3 (aqua)
     "reference": "#52514e",  # secondary ink for reference lines
 }
 SURFACE = "#fcfcfb"

@@ -77,3 +77,48 @@ def event_level_split(data, test_fraction=0.3, seed=42):
     test_events = rng.choice(n_events, size=int(round(test_fraction * n_events)), replace=False)
     is_test = np.isin(event_index, test_events)
     return ~is_test, is_test
+
+
+def balanced_subsample(labels, mask, n_per_class, seed):
+    """Indices of a class-balanced random subsample drawn from the jets where mask is True.
+
+    Used for the quantum-kernel experiments, whose cost grows as n^2.
+    """
+    rng = np.random.default_rng(seed)
+    picked = []
+    for cls in (0, 1):
+        pool = np.flatnonzero(mask & (labels == cls))
+        picked.append(rng.choice(pool, size=n_per_class, replace=False))
+    idx = np.concatenate(picked)
+    rng.shuffle(idx)
+    return idx
+
+
+PF_KEYS = ("PF_pT", "PF_dEta", "PF_dPhi", "PF_fromAK4Jet")
+
+
+def leading_constituents(jets, n_max, require_from_jet=True):
+    """Zero-padded arrays (n_jets, n_max) for the n_max hardest jet constituents.
+
+    Returns z = pT / pT_jet, d_eta, d_phi (relative to the jet axis, phi wrapped to [-pi, pi))
+    and the number of constituents per jet. Requires the PF_KEYS and "jetPt" columns.
+    """
+    n_jets = len(jets["jetPt"])
+    z = np.zeros((n_jets, n_max))
+    d_eta = np.zeros((n_jets, n_max))
+    d_phi = np.zeros((n_jets, n_max))
+    n_const = np.zeros(n_jets, dtype=int)
+    for j in range(n_jets):
+        pt = np.asarray(jets["PF_pT"][j], dtype=np.float64)
+        de = np.asarray(jets["PF_dEta"][j], dtype=np.float64)
+        dp = np.asarray(jets["PF_dPhi"][j], dtype=np.float64)
+        if require_from_jet:
+            keep = np.asarray(jets["PF_fromAK4Jet"][j]) == 1
+            pt, de, dp = pt[keep], de[keep], dp[keep]
+        n_const[j] = len(pt)
+        order = np.argsort(-pt)[:n_max]
+        k = len(order)
+        z[j, :k] = pt[order] / jets["jetPt"][j]
+        d_eta[j, :k] = de[order]
+        d_phi[j, :k] = (dp[order] + np.pi) % (2 * np.pi) - np.pi
+    return z, d_eta, d_phi, n_const

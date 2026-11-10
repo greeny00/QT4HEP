@@ -1,0 +1,704 @@
+{
+  "records": [
+    {
+      "model": "amplitude, raw",
+      "family": "amplitude",
+      "seed": 0,
+      "shots": 1000,
+      "C": 1.0,
+      "f": null,
+      "cv_auc": 0.689375,
+      "conf_auc": 0.6877169204931143
+    },
+    {
+      "model": "amplitude, raw",
+      "family": "amplitude",
+      "seed": 0,
+      "shots": 10000,
+      "C": 1.0,
+      "f": null,
+      "cv_auc": 0.7073750000000001,
+      "conf_auc": 0.6971029601325015
+    },
+    {
+      "model": "amplitude, standardised",
+      "family": "amplitude",
+      "seed": 0,
+      "shots": 1000,
+      "C": 0.1,
+      "f": null,
+      "cv_auc": 0.60025,
+      "conf_auc": 0.6135471541587069
+    },
+    {
+      "model": "amplitude, standardised",
+      "family": "amplitude",
+      "seed": 0,
+      "shots": 10000,
+      "C": 0.1,
+      "f": null,
+      "cv_auc": 0.5992500000000001,
+      "conf_auc": 0.6134653504530155
+    },
+    {
+      "model": "amplitude, min-max",
+      "family": "amplitude",
+      "seed": 0,
+      "shots": 1000,
+      "C": 0.1,
+      "f": null,
+      "cv_auc": 0.7738750000000001,
+      "conf_auc": 0.7943416778840442
+    },
+    {
+      "model": "amplitude, min-max",
+      "family": "amplitude",
+      "seed": 0,
+      "shots": 10000,
+      "C": 0.01,
+      "f": null,
+      "cv_auc": 0.7727499999999999,
+      "conf_auc": 0.7940575245052641
+    },
+    {
+      "model": "angle, robust + YJ",
+      "family": "angle",
+      "seed": 0,
+      "shots": 1000,
+      "C": 0.01,
+      "f": null,
+      "cv_auc": 0.776,
+      "conf_auc": 0.7871958495842694
+    },
+    {
+      "model": "angle, robust + YJ",
+      "family": "angle",
+      "seed": 0,
+      "shots": 10000,
+      "C": 0.01,
+      "f": null,
+      "cv_auc": 0.7761250000000001,
+      "conf_auc": 0.7871717940348671
+    },
+    {
+      "model": "angle, min-max",
+      "family": "angle",
+      "seed": 0,
+      "shots": 1000,
+      "C": 0.01,
+      "f": null,
+      "cv_auc": 0.7748750000000001,
+      "conf_auc": 0.7906245669623579
+    },
+    {
+      "model": "angle, min-max",
+      "family": "angle",
+      "seed": 0,
+      "shots": 10000,
+      "C": 0.01,
+      "f": null,
+      "cv_auc": 0.7751250000000001,
+      "conf_auc": 0.7906559592831235
+    },
+    {
+      "model": "1P1Q (original)",
+      "family": "1P1Q",
+      "seed": 0,
+      "shots": 1000,
+      "C": 0.01,
+      "f": 316.23,
+      "cv_auc": 0.6637500000000001,
+      "conf_auc": 0.690864595585503
+    },
+    {
+      "model": "1P1Q (original)",
+      "family": "1P1Q",
+      "seed": 0,
+      "shots": 10000,
+      "C": 0.01,
+      "f": 316.23,
+      "cv_auc": 0.665875,
+      "conf_auc": 0.6909138063439897
+    },
+    {
+      "model": "1P1Q rotation-invariant",
+      "family": "1P1Q",
+      "seed": 0,
+      "shots": 1000,
+      "C": 0.1,
+      "f": 111.03,
+      "cv_auc": 0.6633749999999999,
+      "conf_auc": 0.6901038479446113
+    },
+    {
+      "model": "1P1Q rotation-invariant",
+      "family": "1P1Q",
+      "seed": 0,
+      "shots": 10000,
+      "C": 10.0,
+      "f": 8.11,
+      "cv_auc": 0.6717500000000001,
+      "conf_auc": 0.695739070446863
+    },
+    {
+      "model": "amplitude, raw",
+      "family": "amplitude",
+      "seed": 1,
+      "shots": 1000,
+      "C": 10.0,
+      "f": null,
+      "cv_auc": 0.7238125,
+      "conf_auc": 0.6910712644408714
+    },
+    {
+      "model": "amplitude, raw",
+      "family": "amplitude",
+      "seed": 1,
+      "shots": 10000,
+      "C": 1.0,
+      "f": null,
+      "cv_auc": 0.7252500000000001,
+      "conf_auc": 0.6977740822169178
+    },
+    {
+      "model": "amplitude, standardised",
+      "family": "amplitude",
+      "seed": 1,
+      "shots": 1000,
+      "C": 10.0,
+      "f": null,
+      "cv_auc": 0.6292500000000001,
+      "conf_auc": 0.5492508229738924
+    },
+    {
+      "model": "amplitude, standardised",
+      "family": "amplitude",
+      "seed": 1,
+      "shots": 10000,
+      "C": 1.0,
+      "f": null,
+      "cv_auc": 0.6046250000000001,
+      "conf_auc": 0.6238908397851559
+    },
+    {
+      "model": "amplitude, min-max",
+      "family": "amplitude",
+      "seed": 1,
+      "shots": 1000,
+      "C": 0.1,
+      "f": null,
+      "cv_auc": 0.804875,
+      "conf_auc": 0.7912814062014998
+    },
+    {
+      "model": "amplitude, min-max",
+      "family": "amplitude",
+      "seed": 1,
+      "shots": 10000,
+      "C": 0.1,
+      "f": null,
+      "cv_auc": 0.803875,
+      "conf_auc": 0.7907918148838178
+    },
+    {
+      "model": "angle, robust + YJ",
+      "family": "angle",
+      "seed": 1,
+      "shots": 1000,
+      "C": 0.1,
+      "f": null,
+      "cv_auc": 0.8037500000000002,
+      "conf_auc": 0.7844418311477185
+    },
+    {
+      "model": "angle, robust + YJ",
+      "family": "angle",
+      "seed": 1,
+      "shots": 10000,
+      "C": 1.0,
+      "f": null,
+      "cv_auc": 0.8030000000000002,
+      "conf_auc": 0.7809147875125972
+    },
+    {
+      "model": "angle, min-max",
+      "family": "angle",
+      "seed": 1,
+      "shots": 1000,
+      "C": 1.0,
+      "f": null,
+      "cv_auc": 0.8012500000000001,
+      "conf_auc": 0.7852152097299391
+    },
+    {
+      "model": "angle, min-max",
+      "family": "angle",
+      "seed": 1,
+      "shots": 10000,
+      "C": 10.0,
+      "f": null,
+      "cv_auc": 0.8049999999999999,
+      "conf_auc": 0.7858871588637929
+    },
+    {
+      "model": "1P1Q (original)",
+      "family": "1P1Q",
+      "seed": 1,
+      "shots": 1000,
+      "C": 0.01,
+      "f": 316.23,
+      "cv_auc": 0.6836249999999999,
+      "conf_auc": 0.6931406005185246
+    },
+    {
+      "model": "1P1Q (original)",
+      "family": "1P1Q",
+      "seed": 1,
+      "shots": 10000,
+      "C": 0.01,
+      "f": 316.23,
+      "cv_auc": 0.6796875,
+      "conf_auc": 0.6933092957764997
+    },
+    {
+      "model": "1P1Q rotation-invariant",
+      "family": "1P1Q",
+      "seed": 1,
+      "shots": 1000,
+      "C": 1.0,
+      "f": 38.99,
+      "cv_auc": 0.70225,
+      "conf_auc": 0.698872228714492
+    },
+    {
+      "model": "1P1Q rotation-invariant",
+      "family": "1P1Q",
+      "seed": 1,
+      "shots": 10000,
+      "C": 10.0,
+      "f": 23.1,
+      "cv_auc": 0.7238749999999999,
+      "conf_auc": 0.689389905858455
+    },
+    {
+      "model": "amplitude, raw",
+      "family": "amplitude",
+      "seed": 2,
+      "shots": 1000,
+      "C": 10.0,
+      "f": null,
+      "cv_auc": 0.7135000000000001,
+      "conf_auc": 0.6832845013611477
+    },
+    {
+      "model": "amplitude, raw",
+      "family": "amplitude",
+      "seed": 2,
+      "shots": 10000,
+      "C": 10.0,
+      "f": null,
+      "cv_auc": 0.7222500000000001,
+      "conf_auc": 0.6968300733268703
+    },
+    {
+      "model": "amplitude, standardised",
+      "family": "amplitude",
+      "seed": 2,
+      "shots": 1000,
+      "C": 0.1,
+      "f": null,
+      "cv_auc": 0.597375,
+      "conf_auc": 0.6154736196409681
+    },
+    {
+      "model": "amplitude, standardised",
+      "family": "amplitude",
+      "seed": 2,
+      "shots": 10000,
+      "C": 0.01,
+      "f": null,
+      "cv_auc": 0.5945,
+      "conf_auc": 0.615720313913831
+    },
+    {
+      "model": "amplitude, min-max",
+      "family": "amplitude",
+      "seed": 2,
+      "shots": 1000,
+      "C": 0.1,
+      "f": null,
+      "cv_auc": 0.8150000000000001,
+      "conf_auc": 0.794606550124081
+    },
+    {
+      "model": "amplitude, min-max",
+      "family": "amplitude",
+      "seed": 2,
+      "shots": 10000,
+      "C": 1.0,
+      "f": null,
+      "cv_auc": 0.8155000000000001,
+      "conf_auc": 0.793832383123182
+    },
+    {
+      "model": "angle, robust + YJ",
+      "family": "angle",
+      "seed": 2,
+      "shots": 1000,
+      "C": 0.1,
+      "f": null,
+      "cv_auc": 0.8133750000000001,
+      "conf_auc": 0.7906043231275339
+    },
+    {
+      "model": "angle, robust + YJ",
+      "family": "angle",
+      "seed": 2,
+      "shots": 10000,
+      "C": 0.1,
+      "f": null,
+      "cv_auc": 0.813,
+      "conf_auc": 0.7904481064827802
+    },
+    {
+      "model": "angle, min-max",
+      "family": "angle",
+      "seed": 2,
+      "shots": 1000,
+      "C": 1.0,
+      "f": null,
+      "cv_auc": 0.810375,
+      "conf_auc": 0.7891702259877644
+    },
+    {
+      "model": "angle, min-max",
+      "family": "angle",
+      "seed": 2,
+      "shots": 10000,
+      "C": 10.0,
+      "f": null,
+      "cv_auc": 0.8157500000000001,
+      "conf_auc": 0.7879561793105831
+    },
+    {
+      "model": "1P1Q (original)",
+      "family": "1P1Q",
+      "seed": 2,
+      "shots": 1000,
+      "C": 0.01,
+      "f": 316.23,
+      "cv_auc": 0.6741874999999999,
+      "conf_auc": 0.6927953574227771
+    },
+    {
+      "model": "1P1Q (original)",
+      "family": "1P1Q",
+      "seed": 2,
+      "shots": 10000,
+      "C": 0.01,
+      "f": 316.23,
+      "cv_auc": 0.6744375,
+      "conf_auc": 0.6931306298317553
+    },
+    {
+      "model": "1P1Q rotation-invariant",
+      "family": "1P1Q",
+      "seed": 2,
+      "shots": 1000,
+      "C": 1.0,
+      "f": 65.79,
+      "cv_auc": 0.702875,
+      "conf_auc": 0.7003444267575659
+    },
+    {
+      "model": "1P1Q rotation-invariant",
+      "family": "1P1Q",
+      "seed": 2,
+      "shots": 10000,
+      "C": 10.0,
+      "f": 8.11,
+      "cv_auc": 0.702875,
+      "conf_auc": 0.6989774773401974
+    },
+    {
+      "model": "amplitude, raw",
+      "family": "amplitude",
+      "seed": 3,
+      "shots": 1000,
+      "C": 0.01,
+      "f": null,
+      "cv_auc": 0.6535000000000001,
+      "conf_auc": 0.6905364132378116
+    },
+    {
+      "model": "amplitude, raw",
+      "family": "amplitude",
+      "seed": 3,
+      "shots": 10000,
+      "C": 100.0,
+      "f": null,
+      "cv_auc": 0.6667500000000001,
+      "conf_auc": 0.6835551726049367
+    },
+    {
+      "model": "amplitude, standardised",
+      "family": "amplitude",
+      "seed": 3,
+      "shots": 1000,
+      "C": 0.01,
+      "f": null,
+      "cv_auc": 0.6224999999999999,
+      "conf_auc": 0.6011502871357611
+    },
+    {
+      "model": "amplitude, standardised",
+      "family": "amplitude",
+      "seed": 3,
+      "shots": 10000,
+      "C": 0.01,
+      "f": null,
+      "cv_auc": 0.621125,
+      "conf_auc": 0.6011414731768412
+    },
+    {
+      "model": "amplitude, min-max",
+      "family": "amplitude",
+      "seed": 3,
+      "shots": 1000,
+      "C": 0.01,
+      "f": null,
+      "cv_auc": 0.778375,
+      "conf_auc": 0.7948548594260735
+    },
+    {
+      "model": "amplitude, min-max",
+      "family": "amplitude",
+      "seed": 3,
+      "shots": 10000,
+      "C": 0.01,
+      "f": null,
+      "cv_auc": 0.77925,
+      "conf_auc": 0.7948722937511312
+    },
+    {
+      "model": "angle, robust + YJ",
+      "family": "angle",
+      "seed": 3,
+      "shots": 1000,
+      "C": 0.01,
+      "f": null,
+      "cv_auc": 0.77025,
+      "conf_auc": 0.7900994981211157
+    },
+    {
+      "model": "angle, robust + YJ",
+      "family": "angle",
+      "seed": 3,
+      "shots": 10000,
+      "C": 0.01,
+      "f": null,
+      "cv_auc": 0.7711250000000001,
+      "conf_auc": 0.7900922232467645
+    },
+    {
+      "model": "angle, min-max",
+      "family": "angle",
+      "seed": 3,
+      "shots": 1000,
+      "C": 1.0,
+      "f": null,
+      "cv_auc": 0.775375,
+      "conf_auc": 0.791997964643626
+    },
+    {
+      "model": "angle, min-max",
+      "family": "angle",
+      "seed": 3,
+      "shots": 10000,
+      "C": 0.1,
+      "f": null,
+      "cv_auc": 0.7703749999999999,
+      "conf_auc": 0.7916046034252995
+    },
+    {
+      "model": "1P1Q (original)",
+      "family": "1P1Q",
+      "seed": 3,
+      "shots": 1000,
+      "C": 1.0,
+      "f": 187.38,
+      "cv_auc": 0.704375,
+      "conf_auc": 0.6778061732978812
+    },
+    {
+      "model": "1P1Q (original)",
+      "family": "1P1Q",
+      "seed": 3,
+      "shots": 10000,
+      "C": 1.0,
+      "f": 187.38,
+      "cv_auc": 0.69575,
+      "conf_auc": 0.6784792466746273
+    },
+    {
+      "model": "1P1Q rotation-invariant",
+      "family": "1P1Q",
+      "seed": 3,
+      "shots": 1000,
+      "C": 1.0,
+      "f": 65.79,
+      "cv_auc": 0.6965,
+      "conf_auc": 0.7001570140187443
+    },
+    {
+      "model": "1P1Q rotation-invariant",
+      "family": "1P1Q",
+      "seed": 3,
+      "shots": 10000,
+      "C": 10.0,
+      "f": 8.11,
+      "cv_auc": 0.7081250000000001,
+      "conf_auc": 0.6937553001840727
+    },
+    {
+      "model": "amplitude, raw",
+      "family": "amplitude",
+      "seed": 4,
+      "shots": 1000,
+      "C": 1.0,
+      "f": null,
+      "cv_auc": 0.6545000000000001,
+      "conf_auc": 0.6859645313580025
+    },
+    {
+      "model": "amplitude, raw",
+      "family": "amplitude",
+      "seed": 4,
+      "shots": 10000,
+      "C": 100.0,
+      "f": null,
+      "cv_auc": 0.694875,
+      "conf_auc": 0.675053379631994
+    },
+    {
+      "model": "amplitude, standardised",
+      "family": "amplitude",
+      "seed": 4,
+      "shots": 1000,
+      "C": 1.0,
+      "f": null,
+      "cv_auc": 0.628125,
+      "conf_auc": 0.6231431967513806
+    },
+    {
+      "model": "amplitude, standardised",
+      "family": "amplitude",
+      "seed": 4,
+      "shots": 10000,
+      "C": 1.0,
+      "f": null,
+      "cv_auc": 0.6284999999999998,
+      "conf_auc": 0.6305283566524869
+    },
+    {
+      "model": "amplitude, min-max",
+      "family": "amplitude",
+      "seed": 4,
+      "shots": 1000,
+      "C": 0.1,
+      "f": null,
+      "cv_auc": 0.80625,
+      "conf_auc": 0.7971015321991628
+    },
+    {
+      "model": "amplitude, min-max",
+      "family": "amplitude",
+      "seed": 4,
+      "shots": 10000,
+      "C": 0.1,
+      "f": null,
+      "cv_auc": 0.8049999999999999,
+      "conf_auc": 0.7973576392077146
+    },
+    {
+      "model": "angle, robust + YJ",
+      "family": "angle",
+      "seed": 4,
+      "shots": 1000,
+      "C": 0.1,
+      "f": null,
+      "cv_auc": 0.805125,
+      "conf_auc": 0.7911685446822992
+    },
+    {
+      "model": "angle, robust + YJ",
+      "family": "angle",
+      "seed": 4,
+      "shots": 10000,
+      "C": 0.01,
+      "f": null,
+      "cv_auc": 0.8026250000000001,
+      "conf_auc": 0.7890141656219916
+    },
+    {
+      "model": "angle, min-max",
+      "family": "angle",
+      "seed": 4,
+      "shots": 1000,
+      "C": 1.0,
+      "f": null,
+      "cv_auc": 0.7902499999999999,
+      "conf_auc": 0.7896032868960469
+    },
+    {
+      "model": "angle, min-max",
+      "family": "angle",
+      "seed": 4,
+      "shots": 10000,
+      "C": 10.0,
+      "f": null,
+      "cv_auc": 0.805125,
+      "conf_auc": 0.7829508576776593
+    },
+    {
+      "model": "1P1Q (original)",
+      "family": "1P1Q",
+      "seed": 4,
+      "shots": 1000,
+      "C": 0.01,
+      "f": 187.38,
+      "cv_auc": 0.704875,
+      "conf_auc": 0.6861109669578964
+    },
+    {
+      "model": "1P1Q (original)",
+      "family": "1P1Q",
+      "seed": 4,
+      "shots": 10000,
+      "C": 0.1,
+      "f": 187.38,
+      "cv_auc": 0.706,
+      "conf_auc": 0.68720531271554
+    },
+    {
+      "model": "1P1Q rotation-invariant",
+      "family": "1P1Q",
+      "seed": 4,
+      "shots": 1000,
+      "C": 1.0,
+      "f": 23.1,
+      "cv_auc": 0.72075,
+      "conf_auc": 0.7009782073842864
+    },
+    {
+      "model": "1P1Q rotation-invariant",
+      "family": "1P1Q",
+      "seed": 4,
+      "shots": 10000,
+      "C": 1.0,
+      "f": 38.99,
+      "cv_auc": 0.7193750000000001,
+      "conf_auc": 0.7076561425614931
+    }
+  ]
+}

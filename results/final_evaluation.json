@@ -1,0 +1,610 @@
+{
+  "qgl_conf_auc": 0.7870164397646364,
+  "records": [
+    {
+      "model": "amplitude, raw",
+      "family": "amplitude",
+      "seed": 0,
+      "C": 1000000.0,
+      "f": null,
+      "cv_auc": 0.773875,
+      "dev_auc": 0.7840767736165226,
+      "conf_auc": 0.7794913186604766,
+      "conf_auc_100": 0.5625758545687612,
+      "conf_auc_1000": 0.590622503553029
+    },
+    {
+      "model": "amplitude, standardised",
+      "family": "amplitude",
+      "seed": 0,
+      "C": 0.1,
+      "f": null,
+      "cv_auc": 0.600625,
+      "dev_auc": 0.6123590307690726,
+      "conf_auc": 0.613333921586147,
+      "conf_auc_100": 0.6122447154754322,
+      "conf_auc_1000": 0.6137048181399762
+    },
+    {
+      "model": "amplitude, min-max",
+      "family": "amplitude",
+      "seed": 0,
+      "C": 0.01,
+      "f": null,
+      "cv_auc": 0.772625,
+      "dev_auc": 0.7975839231069356,
+      "conf_auc": 0.7940597743080067,
+      "conf_auc_100": 0.7938978091428794,
+      "conf_auc_1000": 0.7940434804683196
+    },
+    {
+      "model": "angle, robust + YJ",
+      "family": "angle",
+      "seed": 0,
+      "C": 0.01,
+      "f": null,
+      "cv_auc": 0.775875,
+      "dev_auc": 0.788941824506678,
+      "conf_auc": 0.7871747422641782,
+      "conf_auc_100": 0.7870946940631048,
+      "conf_auc_1000": 0.7871724446119723
+    },
+    {
+      "model": "angle, min-max",
+      "family": "angle",
+      "seed": 0,
+      "C": 0.01,
+      "f": null,
+      "cv_auc": 0.7755,
+      "dev_auc": 0.7942347335652775,
+      "conf_auc": 0.7906884012191784,
+      "conf_auc_100": 0.7897522119849851,
+      "conf_auc_1000": 0.790613597582664
+    },
+    {
+      "model": "1P1Q (original)",
+      "family": "1P1Q",
+      "seed": 0,
+      "C": 0.01,
+      "f": 316.23,
+      "cv_auc": 0.6667500000000001,
+      "dev_auc": 0.6976606830163317,
+      "conf_auc": 0.6908908706476207,
+      "conf_auc_100": 0.6897746879753186,
+      "conf_auc_1000": 0.6908803692268973
+    },
+    {
+      "model": "1P1Q rotation-invariant",
+      "family": "1P1Q",
+      "seed": 0,
+      "C": 100.0,
+      "f": 2.85,
+      "cv_auc": 0.6758750000000001,
+      "dev_auc": 0.705474479533057,
+      "conf_auc": 0.7031712088631492,
+      "conf_auc_100": 0.5512919730838007,
+      "conf_auc_1000": 0.5835836622631277
+    },
+    {
+      "model": "RBF-SVM (QGL inputs)",
+      "family": "classical",
+      "seed": 0,
+      "params": {
+        "C": "10.0",
+        "gamma": "0.1"
+      },
+      "cv_auc": 0.775125,
+      "dev_auc": 0.784083137639623,
+      "conf_auc": 0.7838448217360083
+    },
+    {
+      "model": "RBF-SVM (invariant constituent angles)",
+      "family": "classical",
+      "seed": 0,
+      "params": {
+        "C": "0.01",
+        "gamma": "0.01"
+      },
+      "cv_auc": 0.681125,
+      "dev_auc": 0.7060548294857918,
+      "conf_auc": 0.7037960271537153
+    },
+    {
+      "model": "BDT (QGL inputs)",
+      "family": "classical",
+      "seed": 0,
+      "params": {
+        "learning_rate": "0.03",
+        "max_iter": "100",
+        "max_leaf_nodes": "7"
+      },
+      "cv_auc": 0.7361875,
+      "dev_auc": 0.7784525682015221,
+      "conf_auc": 0.7745911565391204
+    },
+    {
+      "model": "amplitude, raw",
+      "family": "amplitude",
+      "seed": 1,
+      "C": 10000.0,
+      "f": null,
+      "cv_auc": 0.7994999999999999,
+      "dev_auc": 0.7773316434404299,
+      "conf_auc": 0.7773129125848499,
+      "conf_auc_100": 0.5817036507078949,
+      "conf_auc_1000": 0.6151666306546046
+    },
+    {
+      "model": "amplitude, standardised",
+      "family": "amplitude",
+      "seed": 1,
+      "C": 10000.0,
+      "f": null,
+      "cv_auc": 0.608125,
+      "dev_auc": 0.6221317225501326,
+      "conf_auc": 0.623368278870366,
+      "conf_auc_100": 0.5249529941798968,
+      "conf_auc_1000": 0.5404260079325244
+    },
+    {
+      "model": "amplitude, min-max",
+      "family": "amplitude",
+      "seed": 1,
+      "C": 0.1,
+      "f": null,
+      "cv_auc": 0.80475,
+      "dev_auc": 0.7947372466200918,
+      "conf_auc": 0.7907434974616395,
+      "conf_auc_100": 0.7897204469651897,
+      "conf_auc_1000": 0.7907525072082714
+    },
+    {
+      "model": "angle, robust + YJ",
+      "family": "angle",
+      "seed": 1,
+      "C": 0.1,
+      "f": null,
+      "cv_auc": 0.802125,
+      "dev_auc": 0.7872269650512328,
+      "conf_auc": 0.7845679746243394,
+      "conf_auc_100": 0.7847864614191481,
+      "conf_auc_1000": 0.7843335271801422
+    },
+    {
+      "model": "angle, min-max",
+      "family": "angle",
+      "seed": 1,
+      "C": 10.0,
+      "f": null,
+      "cv_auc": 0.81425,
+      "dev_auc": 0.790765361895069,
+      "conf_auc": 0.7892070178351122,
+      "conf_auc_100": 0.724141599155259,
+      "conf_auc_1000": 0.7562152624749731
+    },
+    {
+      "model": "1P1Q (original)",
+      "family": "1P1Q",
+      "seed": 1,
+      "C": 0.01,
+      "f": 316.23,
+      "cv_auc": 0.68075,
+      "dev_auc": 0.6975703628423293,
+      "conf_auc": 0.6932733226378576,
+      "conf_auc_100": 0.69184098056372,
+      "conf_auc_1000": 0.6931881207423065
+    },
+    {
+      "model": "1P1Q rotation-invariant",
+      "family": "1P1Q",
+      "seed": 1,
+      "C": 100000.0,
+      "f": 1.0,
+      "cv_auc": 0.728875,
+      "dev_auc": 0.7083914050441247,
+      "conf_auc": 0.6971164914339136,
+      "conf_auc_100": 0.5240018548418597,
+      "conf_auc_1000": 0.5487687857255945
+    },
+    {
+      "model": "RBF-SVM (QGL inputs)",
+      "family": "classical",
+      "seed": 1,
+      "params": {
+        "C": "10.0",
+        "gamma": "0.01"
+      },
+      "cv_auc": 0.8155000000000001,
+      "dev_auc": 0.7928801757253641,
+      "conf_auc": 0.7916556961163437
+    },
+    {
+      "model": "RBF-SVM (invariant constituent angles)",
+      "family": "classical",
+      "seed": 1,
+      "params": {
+        "C": "1.0",
+        "gamma": "0.01"
+      },
+      "cv_auc": 0.7181249999999999,
+      "dev_auc": 0.7166445639248986,
+      "conf_auc": 0.7085506693997671
+    },
+    {
+      "model": "BDT (QGL inputs)",
+      "family": "classical",
+      "seed": 1,
+      "params": {
+        "learning_rate": "0.03",
+        "max_iter": "100",
+        "max_leaf_nodes": "15"
+      },
+      "cv_auc": 0.7968750000000001,
+      "dev_auc": 0.7762475565822846,
+      "conf_auc": 0.7732482512575207
+    },
+    {
+      "model": "amplitude, raw",
+      "family": "amplitude",
+      "seed": 2,
+      "C": 1000000.0,
+      "f": null,
+      "cv_auc": 0.8065,
+      "dev_auc": 0.7883134996105707,
+      "conf_auc": 0.788576418978202,
+      "conf_auc_100": 0.5752814985676451,
+      "conf_auc_1000": 0.5961452525996165
+    },
+    {
+      "model": "amplitude, standardised",
+      "family": "amplitude",
+      "seed": 2,
+      "C": 0.1,
+      "f": null,
+      "cv_auc": 0.59575,
+      "dev_auc": 0.6144895098869994,
+      "conf_auc": 0.6158422097628736,
+      "conf_auc_100": 0.614127334167931,
+      "conf_auc_1000": 0.6155399635801844
+    },
+    {
+      "model": "amplitude, min-max",
+      "family": "amplitude",
+      "seed": 2,
+      "C": 0.1,
+      "f": null,
+      "cv_auc": 0.814625,
+      "dev_auc": 0.7991149602028264,
+      "conf_auc": 0.7947654994560684,
+      "conf_auc_100": 0.7939533799290996,
+      "conf_auc_1000": 0.7946189264535874
+    },
+    {
+      "model": "angle, robust + YJ",
+      "family": "angle",
+      "seed": 2,
+      "C": 0.1,
+      "f": null,
+      "cv_auc": 0.81425,
+      "dev_auc": 0.7915951325993167,
+      "conf_auc": 0.7906352672436946,
+      "conf_auc_100": 0.7894610238571418,
+      "conf_auc_1000": 0.7906145277937884
+    },
+    {
+      "model": "angle, min-max",
+      "family": "angle",
+      "seed": 2,
+      "C": 10.0,
+      "f": null,
+      "cv_auc": 0.81775,
+      "dev_auc": 0.7984217712251186,
+      "conf_auc": 0.7963002951326795,
+      "conf_auc_100": 0.7343690413151265,
+      "conf_auc_1000": 0.7643067603484588
+    },
+    {
+      "model": "1P1Q (original)",
+      "family": "1P1Q",
+      "seed": 2,
+      "C": 0.01,
+      "f": 316.23,
+      "cv_auc": 0.67375,
+      "dev_auc": 0.6949743309575944,
+      "conf_auc": 0.6931047362483856,
+      "conf_auc_100": 0.6918987006249115,
+      "conf_auc_1000": 0.6929009958679627
+    },
+    {
+      "model": "1P1Q rotation-invariant",
+      "family": "1P1Q",
+      "seed": 2,
+      "C": 1000.0,
+      "f": 2.85,
+      "cv_auc": 0.719875,
+      "dev_auc": 0.7015581576251033,
+      "conf_auc": 0.6973676124406019,
+      "conf_auc_100": 0.5301221536918015,
+      "conf_auc_1000": 0.5551465098587489
+    },
+    {
+      "model": "RBF-SVM (QGL inputs)",
+      "family": "classical",
+      "seed": 2,
+      "params": {
+        "C": "10.0",
+        "gamma": "0.01"
+      },
+      "cv_auc": 0.81875,
+      "dev_auc": 0.7989974705455876,
+      "conf_auc": 0.7971633651192607
+    },
+    {
+      "model": "RBF-SVM (invariant constituent angles)",
+      "family": "classical",
+      "seed": 2,
+      "params": {
+        "C": "1.0",
+        "gamma": "0.01"
+      },
+      "cv_auc": 0.715625,
+      "dev_auc": 0.7109118029620121,
+      "conf_auc": 0.708821495605579
+    },
+    {
+      "model": "BDT (QGL inputs)",
+      "family": "classical",
+      "seed": 2,
+      "params": {
+        "learning_rate": "0.03",
+        "max_iter": "100",
+        "max_leaf_nodes": "7"
+      },
+      "cv_auc": 0.804875,
+      "dev_auc": 0.7799646356131711,
+      "conf_auc": 0.7808249301715662
+    },
+    {
+      "model": "amplitude, raw",
+      "family": "amplitude",
+      "seed": 3,
+      "C": 1000000.0,
+      "f": null,
+      "cv_auc": 0.7715,
+      "dev_auc": 0.7896543503238064,
+      "conf_auc": 0.7879805869266782,
+      "conf_auc_100": 0.5563543791263315,
+      "conf_auc_1000": 0.592553513856323
+    },
+    {
+      "model": "amplitude, standardised",
+      "family": "amplitude",
+      "seed": 3,
+      "C": 0.01,
+      "f": null,
+      "cv_auc": 0.6208750000000001,
+      "dev_auc": 0.5984132532249686,
+      "conf_auc": 0.6011488143380634,
+      "conf_auc_100": 0.6009845142069288,
+      "conf_auc_1000": 0.6011456791007586
+    },
+    {
+      "model": "amplitude, min-max",
+      "family": "amplitude",
+      "seed": 3,
+      "C": 10000.0,
+      "f": null,
+      "cv_auc": 0.779625,
+      "dev_auc": 0.7929746569913934,
+      "conf_auc": 0.7880875186243279,
+      "conf_auc_100": 0.6836100344289266,
+      "conf_auc_1000": 0.7040191022291613
+    },
+    {
+      "model": "angle, robust + YJ",
+      "family": "angle",
+      "seed": 3,
+      "C": 0.01,
+      "f": null,
+      "cv_auc": 0.771,
+      "dev_auc": 0.7921546770919156,
+      "conf_auc": 0.7900947474156953,
+      "conf_auc_100": 0.7900915581831246,
+      "conf_auc_1000": 0.790103412558395
+    },
+    {
+      "model": "angle, min-max",
+      "family": "angle",
+      "seed": 3,
+      "C": 100.0,
+      "f": null,
+      "cv_auc": 0.78225,
+      "dev_auc": 0.800010084528913,
+      "conf_auc": 0.7968588247962527,
+      "conf_auc_100": 0.6948268832057922,
+      "conf_auc_1000": 0.7086418520392331
+    },
+    {
+      "model": "1P1Q (original)",
+      "family": "1P1Q",
+      "seed": 3,
+      "C": 1.0,
+      "f": 187.38,
+      "cv_auc": 0.697625,
+      "dev_auc": 0.683440762938671,
+      "conf_auc": 0.6805323494926478,
+      "conf_auc_100": 0.6578413184037577,
+      "conf_auc_1000": 0.6775719058379035
+    },
+    {
+      "model": "1P1Q rotation-invariant",
+      "family": "1P1Q",
+      "seed": 3,
+      "C": 1000.0,
+      "f": 1.69,
+      "cv_auc": 0.7016249999999999,
+      "dev_auc": 0.7150973720011378,
+      "conf_auc": 0.7090683057707197,
+      "conf_auc_100": 0.5507935585884948,
+      "conf_auc_1000": 0.5716205466732864
+    },
+    {
+      "model": "RBF-SVM (QGL inputs)",
+      "family": "classical",
+      "seed": 3,
+      "params": {
+        "C": "1000.0",
+        "gamma": "0.01"
+      },
+      "cv_auc": 0.781,
+      "dev_auc": 0.7938844675246348,
+      "conf_auc": 0.7897141220563283
+    },
+    {
+      "model": "RBF-SVM (invariant constituent angles)",
+      "family": "classical",
+      "seed": 3,
+      "params": {
+        "C": "0.01",
+        "gamma": "0.01"
+      },
+      "cv_auc": 0.71075,
+      "dev_auc": 0.7067918323148449,
+      "conf_auc": 0.7041582168611844
+    },
+    {
+      "model": "BDT (QGL inputs)",
+      "family": "classical",
+      "seed": 3,
+      "params": {
+        "learning_rate": "0.03",
+        "max_iter": "100",
+        "max_leaf_nodes": "7"
+      },
+      "cv_auc": 0.7575624999999999,
+      "dev_auc": 0.7847046089723914,
+      "conf_auc": 0.7774134017254168
+    },
+    {
+      "model": "amplitude, raw",
+      "family": "amplitude",
+      "seed": 4,
+      "C": 100000.0,
+      "f": null,
+      "cv_auc": 0.80275,
+      "dev_auc": 0.7904092213715644,
+      "conf_auc": 0.7866595703600738,
+      "conf_auc_100": 0.5476217568309876,
+      "conf_auc_1000": 0.5623180034692248
+    },
+    {
+      "model": "amplitude, standardised",
+      "family": "amplitude",
+      "seed": 4,
+      "C": 1000.0,
+      "f": null,
+      "cv_auc": 0.6196250000000001,
+      "dev_auc": 0.6345817098955174,
+      "conf_auc": 0.6335958391174408,
+      "conf_auc_100": 0.533116784690543,
+      "conf_auc_1000": 0.5231445430333419
+    },
+    {
+      "model": "amplitude, min-max",
+      "family": "amplitude",
+      "seed": 4,
+      "C": 0.1,
+      "f": null,
+      "cv_auc": 0.8057500000000001,
+      "dev_auc": 0.8015898308785339,
+      "conf_auc": 0.7973548639388486,
+      "conf_auc_100": 0.7958959719974196,
+      "conf_auc_1000": 0.7971408978208481
+    },
+    {
+      "model": "angle, robust + YJ",
+      "family": "angle",
+      "seed": 4,
+      "C": 0.1,
+      "f": null,
+      "cv_auc": 0.803125,
+      "dev_auc": 0.7948997739792718,
+      "conf_auc": 0.7911661820601802,
+      "conf_auc_100": 0.7899765926045007,
+      "conf_auc_1000": 0.790506280894379
+    },
+    {
+      "model": "angle, min-max",
+      "family": "angle",
+      "seed": 4,
+      "C": 10.0,
+      "f": null,
+      "cv_auc": 0.8039999999999999,
+      "dev_auc": 0.7960098064700576,
+      "conf_auc": 0.7934500465967731,
+      "conf_auc_100": 0.716450219371088,
+      "conf_auc_1000": 0.7613588778362853
+    },
+    {
+      "model": "1P1Q (original)",
+      "family": "1P1Q",
+      "seed": 4,
+      "C": 0.01,
+      "f": 187.38,
+      "cv_auc": 0.706125,
+      "dev_auc": 0.6928298999428706,
+      "conf_auc": 0.6861374250771349,
+      "conf_auc_100": 0.6858182037486403,
+      "conf_auc_1000": 0.6861616184681102
+    },
+    {
+      "model": "1P1Q rotation-invariant",
+      "family": "1P1Q",
+      "seed": 4,
+      "C": 1.0,
+      "f": 38.99,
+      "cv_auc": 0.7221249999999999,
+      "dev_auc": 0.7169081813433278,
+      "conf_auc": 0.7082601221913392,
+      "conf_auc_100": 0.675871381570036,
+      "conf_auc_1000": 0.7020800584838791
+    },
+    {
+      "model": "RBF-SVM (QGL inputs)",
+      "family": "classical",
+      "seed": 4,
+      "params": {
+        "C": "10.0",
+        "gamma": "0.01"
+      },
+      "cv_auc": 0.805125,
+      "dev_auc": 0.797029518786841,
+      "conf_auc": 0.7946105462127376
+    },
+    {
+      "model": "RBF-SVM (invariant constituent angles)",
+      "family": "classical",
+      "seed": 4,
+      "params": {
+        "C": "0.1",
+        "gamma": "0.01"
+      },
+      "cv_auc": 0.7202500000000001,
+      "dev_auc": 0.7093832135673139,
+      "conf_auc": 0.7059325478285849
+    },
+    {
+      "model": "BDT (QGL inputs)",
+      "family": "classical",
+      "seed": 4,
+      "params": {
+        "learning_rate": "0.03",
+        "max_iter": "100",
+        "max_leaf_nodes": "7"
+      },
+      "cv_auc": 0.789,
+      "dev_auc": 0.7778865373007632,
+      "conf_auc": 0.7780467560968277
+    }
+  ]
+}
