@@ -254,3 +254,60 @@
   year    = {2011},
   note    = {RobustScaler, PowerTransformer, classical baselines, ROC/AUC.}
 }
+
+
+% ---------------------------------------------------------------------
+% 7) AMPLITUDE ENCODING: NORM / SIGN INVARIANCE AND CONCENTRATION (added 2026-11-11)
+% ---------------------------------------------------------------------
+
+@misc{gurgul2026amplitude,
+  author        = {Gurgul, Vincent and Prinz, David},
+  title         = {Overcoming the Representational Limitations of Amplitude Encoding for Quantum Neural Networks},
+  year          = {2026},
+  eprint        = {2610.41824},
+  archivePrefix = {arXiv},
+  primaryClass  = {quant-ph},
+  note          = {Normalisation makes amplitude encoding invariant to any nonzero real rescaling, including x -> -x (global phase); no downstream circuit can undo it. Proposes a fixed nonlinear preprocessing. Directly related to our sign-blindness result: cite, do not claim it as new.}
+}
+
+@article{schuld2020circuit,
+  author  = {Schuld, Maria and Bocharov, Alex and Svore, Krysta M. and Wiebe, Nathan},
+  title   = {Circuit-centric quantum classifiers},
+  journal = {Physical Review A},
+  volume  = {101},
+  pages   = {032308},
+  year    = {2020},
+  eprint  = {1804.00633},
+  note    = {Notes that normalisation can distort data and proposes adding non-informative constant padding terms before normalisation. Known remedy for norm/sign loss; candidate fix for the unused 4th amplitude in our 3-feature encoding.}
+}
+
+@article{schuld2019feature,
+  author  = {Schuld, Maria and Killoran, Nathan},
+  title   = {Quantum machine learning in feature {Hilbert} spaces},
+  journal = {Physical Review Letters},
+  volume  = {122},
+  pages   = {040504},
+  year    = {2019},
+  eprint  = {1803.07128},
+  note    = {Amplitude encoding corresponds to the linear kernel (inner product); the fidelity kernel used here is its square.}
+}
+
+@misc{wang2025amplitude,
+  author        = {Wang, Xin and Wang, Yabo and Qi, Bo and Wu, Rebing},
+  title         = {Limitations of Amplitude Encoding on Quantum Classification},
+  year          = {2025},
+  eprint        = {2503.01545},
+  archivePrefix = {arXiv},
+  primaryClass  = {quant-ph},
+  note          = {Average amplitude-encoded state concentrates towards a specific state, giving a loss barrier for trained classifiers. Source of the "concentration / loss barrier" language in the abstract.}
+}
+
+@misc{parzygnat2024structure,
+  author        = {Parzygnat, Arthur J. and Bradley, Tai-Danae and Vlasic, Andrew and Pham, Anh},
+  title         = {Towards structure-preserving quantum encodings},
+  year          = {2024},
+  eprint        = {2412.17772},
+  archivePrefix = {arXiv},
+  primaryClass  = {quant-ph},
+  note          = {Amplitude encoding is in general not one-to-one and not distance preserving.}
+}

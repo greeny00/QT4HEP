@@ -1,0 +1,991 @@
+{
+  "run": {
+    "job_id": "dry-run",
+    "backend": "local StatevectorSampler (dry run)",
+    "shots": 4000,
+    "dry_run": true,
+    "submitted_utc": "2026-11-10T11:29:12+00:00"
+  },
+  "meta": [
+    {
+      "exp": "A",
+      "kind": "reference"
+    },
+    {
+      "exp": "A",
+      "kind": "jet",
+      "jet": 9007,
+      "exact": [
+        0.9662978033034219,
+        2.6089771011802485e-05,
+        0.0004550874192122365,
+        0.033221019506354095
+      ]
+    },
+    {
+      "exp": "A",
+      "kind": "jet",
+      "jet": 10669,
+      "exact": [
+        0.9840672647766688,
+        1.2693835998662784e-05,
+        1.2129023776987098e-05,
+        0.01590791236355525
+      ]
+    },
+    {
+      "exp": "A",
+      "kind": "jet",
+      "jet": 6133,
+      "exact": [
+        0.9799133174009267,
+        0.00038461031726723887,
+        0.001554644792657548,
+        0.018147427489148642
+      ]
+    },
+    {
+      "exp": "A",
+      "kind": "jet",
+      "jet": 11718,
+      "exact": [
+        0.9581585608465968,
+        0.0019301590168842783,
+        0.00020550516472680943,
+        0.03970577497179213
+      ]
+    },
+    {
+      "exp": "A",
+      "kind": "jet",
+      "jet": 6195,
+      "exact": [
+        0.9881514118579856,
+        1.0394023936898932e-05,
+        2.2342081127896004e-05,
+        0.011815852036949577
+      ]
+    },
+    {
+      "exp": "A",
+      "kind": "jet",
+      "jet": 1271,
+      "exact": [
+        0.9914352126656355,
+        1.0869658294128973e-07,
+        3.74020088369394e-06,
+        0.008560938436897935
+      ]
+    },
+    {
+      "exp": "B",
+      "prep": "raw",
+      "pair": [
+        10613,
+        13513
+      ],
+      "same_class": true,
+      "exact": 0.99958141427324
+    },
+    {
+      "exp": "B",
+      "prep": "raw",
+      "pair": [
+        10613,
+        10249
+      ],
+      "same_class": true,
+      "exact": 0.9997418802976441
+    },
+    {
+      "exp": "B",
+      "prep": "raw",
+      "pair": [
+        10613,
+        10046
+      ],
+      "same_class": true,
+      "exact": 0.9999885161303671
+    },
+    {
+      "exp": "B",
+      "prep": "raw",
+      "pair": [
+        10613,
+        5200
+      ],
+      "same_class": false,
+      "exact": 0.9999958035416773
+    },
+    {
+      "exp": "B",
+      "prep": "raw",
+      "pair": [
+        10613,
+        6292
+      ],
+      "same_class": false,
+      "exact": 0.999971603367057
+    },
+    {
+      "exp": "B",
+      "prep": "raw",
+      "pair": [
+        10613,
+        6999
+      ],
+      "same_class": false,
+      "exact": 0.9997822238767505
+    },
+    {
+      "exp": "B",
+      "prep": "raw",
+      "pair": [
+        10613,
+        11387
+      ],
+      "same_class": false,
+      "exact": 0.9953935733189134
+    },
+    {
+      "exp": "B",
+      "prep": "raw",
+      "pair": [
+        13513,
+        10249
+      ],
+      "same_class": true,
+      "exact": 0.9986672378146295
+    },
+    {
+      "exp": "B",
+      "prep": "raw",
+      "pair": [
+        13513,
+        10046
+      ],
+      "same_class": true,
+      "exact": 0.999431480936152
+    },
+    {
+      "exp": "B",
+      "prep": "raw",
+      "pair": [
+        13513,
+        5200
+      ],
+      "same_class": false,
+      "exact": 0.9996149520955429
+    },
+    {
+      "exp": "B",
+      "prep": "raw",
+      "pair": [
+        13513,
+        6292
+      ],
+      "same_class": false,
+      "exact": 0.999762773541339
+    },
+    {
+      "exp": "B",
+      "prep": "raw",
+      "pair": [
+        13513,
+        6999
+      ],
+      "same_class": false,
+      "exact": 0.9987609013602476
+    },
+    {
+      "exp": "B",
+      "prep": "raw",
+      "pair": [
+        13513,
+        11387
+      ],
+      "same_class": false,
+      "exact": 0.9977485861994366
+    },
+    {
+      "exp": "B",
+      "prep": "raw",
+      "pair": [
+        10249,
+        10046
+      ],
+      "same_class": true,
+      "exact": 0.9998392765782121
+    },
+    {
+      "exp": "B",
+      "prep": "raw",
+      "pair": [
+        10249,
+        5200
+      ],
+      "same_class": false,
+      "exact": 0.9997111848387535
+    },
+    {
+      "exp": "B",
+      "prep": "raw",
+      "pair": [
+        10249,
+        6292
+      ],
+      "same_class": false,
+      "exact": 0.9995514719763684
+    },
+    {
+      "exp": "B",
+      "prep": "raw",
+      "pair": [
+        10249,
+        6999
+      ],
+      "same_class": false,
+      "exact": 0.999998284014027
+    },
+    {
+      "exp": "B",
+      "prep": "raw",
+      "pair": [
+        10249,
+        11387
+      ],
+      "same_class": false,
+      "exact": 0.992967743010244
+    },
+    {
+      "exp": "B",
+      "prep": "raw",
+      "pair": [
+        10046,
+        5200
+      ],
+      "same_class": false,
+      "exact": 0.9999787009989309
+    },
+    {
+      "exp": "B",
+      "prep": "raw",
+      "pair": [
+        10046,
+        6292
+      ],
+      "same_class": false,
+      "exact": 0.9999259142235525
+    },
+    {
+      "exp": "B",
+      "prep": "raw",
+      "pair": [
+        10046,
+        6999
+      ],
+      "same_class": false,
+      "exact": 0.9998707517457022
+    },
+    {
+      "exp": "B",
+      "prep": "raw",
+      "pair": [
+        10046,
+        11387
+      ],
+      "same_class": false,
+      "exact": 0.9949243366743344
+    },
+    {
+      "exp": "B",
+      "prep": "raw",
+      "pair": [
+        5200,
+        6292
+      ],
+      "same_class": true,
+      "exact": 0.9999821817507464
+    },
+    {
+      "exp": "B",
+      "prep": "raw",
+      "pair": [
+        5200,
+        6999
+      ],
+      "same_class": true,
+      "exact": 0.9997535087512953
+    },
+    {
+      "exp": "B",
+      "prep": "raw",
+      "pair": [
+        5200,
+        11387
+      ],
+      "same_class": true,
+      "exact": 0.9955187772455218
+    },
+    {
+      "exp": "B",
+      "prep": "raw",
+      "pair": [
+        6292,
+        6999
+      ],
+      "same_class": true,
+      "exact": 0.9996048475637326
+    },
+    {
+      "exp": "B",
+      "prep": "raw",
+      "pair": [
+        6292,
+        11387
+      ],
+      "same_class": true,
+      "exact": 0.996063180086209
+    },
+    {
+      "exp": "B",
+      "prep": "raw",
+      "pair": [
+        6999,
+        11387
+      ],
+      "same_class": true,
+      "exact": 0.9931840230617908
+    },
+    {
+      "exp": "B",
+      "prep": "minmax",
+      "pair": [
+        10613,
+        13513
+      ],
+      "same_class": true,
+      "exact": 0.9418305457853954
+    },
+    {
+      "exp": "B",
+      "prep": "minmax",
+      "pair": [
+        10613,
+        10249
+      ],
+      "same_class": true,
+      "exact": 0.4254310804199515
+    },
+    {
+      "exp": "B",
+      "prep": "minmax",
+      "pair": [
+        10613,
+        10046
+      ],
+      "same_class": true,
+      "exact": 0.9928620044362426
+    },
+    {
+      "exp": "B",
+      "prep": "minmax",
+      "pair": [
+        10613,
+        5200
+      ],
+      "same_class": false,
+      "exact": 0.5898404848659351
+    },
+    {
+      "exp": "B",
+      "prep": "minmax",
+      "pair": [
+        10613,
+        6292
+      ],
+      "same_class": false,
+      "exact": 0.8083767361040304
+    },
+    {
+      "exp": "B",
+      "prep": "minmax",
+      "pair": [
+        10613,
+        6999
+      ],
+      "same_class": false,
+      "exact": 0.5840494866828333
+    },
+    {
+      "exp": "B",
+      "prep": "minmax",
+      "pair": [
+        10613,
+        11387
+      ],
+      "same_class": false,
+      "exact": 0.842032817270492
+    },
+    {
+      "exp": "B",
+      "prep": "minmax",
+      "pair": [
+        13513,
+        10249
+      ],
+      "same_class": true,
+      "exact": 0.24859519973009356
+    },
+    {
+      "exp": "B",
+      "prep": "minmax",
+      "pair": [
+        13513,
+        10046
+      ],
+      "same_class": true,
+      "exact": 0.9091239331123332
+    },
+    {
+      "exp": "B",
+      "prep": "minmax",
+      "pair": [
+        13513,
+        5200
+      ],
+      "same_class": false,
+      "exact": 0.5441465998070232
+    },
+    {
+      "exp": "B",
+      "prep": "minmax",
+      "pair": [
+        13513,
+        6292
+      ],
+      "same_class": false,
+      "exact": 0.7952750130226093
+    },
+    {
+      "exp": "B",
+      "prep": "minmax",
+      "pair": [
+        13513,
+        6999
+      ],
+      "same_class": false,
+      "exact": 0.39100039330281205
+    },
+    {
+      "exp": "B",
+      "prep": "minmax",
+      "pair": [
+        13513,
+        11387
+      ],
+      "same_class": false,
+      "exact": 0.9644756110497744
+    },
+    {
+      "exp": "B",
+      "prep": "minmax",
+      "pair": [
+        10249,
+        10046
+      ],
+      "same_class": true,
+      "exact": 0.5092838737753722
+    },
+    {
+      "exp": "B",
+      "prep": "minmax",
+      "pair": [
+        10249,
+        5200
+      ],
+      "same_class": false,
+      "exact": 0.7179898654056306
+    },
+    {
+      "exp": "B",
+      "prep": "minmax",
+      "pair": [
+        10249,
+        6292
+      ],
+      "same_class": false,
+      "exact": 0.5824496487104525
+    },
+    {
+      "exp": "B",
+      "prep": "minmax",
+      "pair": [
+        10249,
+        6999
+      ],
+      "same_class": false,
+      "exact": 0.9746578891427368
+    },
+    {
+      "exp": "B",
+      "prep": "minmax",
+      "pair": [
+        10249,
+        11387
+      ],
+      "same_class": false,
+      "exact": 0.20034551481749607
+    },
+    {
+      "exp": "B",
+      "prep": "minmax",
+      "pair": [
+        10046,
+        5200
+      ],
+      "same_class": false,
+      "exact": 0.6519910929359983
+    },
+    {
+      "exp": "B",
+      "prep": "minmax",
+      "pair": [
+        10046,
+        6292
+      ],
+      "same_class": false,
+      "exact": 0.8438324878494297
+    },
+    {
+      "exp": "B",
+      "prep": "minmax",
+      "pair": [
+        10046,
+        6999
+      ],
+      "same_class": false,
+      "exact": 0.6652064099248771
+    },
+    {
+      "exp": "B",
+      "prep": "minmax",
+      "pair": [
+        10046,
+        11387
+      ],
+      "same_class": false,
+      "exact": 0.8109004068948723
+    },
+    {
+      "exp": "B",
+      "prep": "minmax",
+      "pair": [
+        5200,
+        6292
+      ],
+      "same_class": true,
+      "exact": 0.9279498542853134
+    },
+    {
+      "exp": "B",
+      "prep": "minmax",
+      "pair": [
+        5200,
+        6999
+      ],
+      "same_class": true,
+      "exact": 0.7674346361436357
+    },
+    {
+      "exp": "B",
+      "prep": "minmax",
+      "pair": [
+        5200,
+        11387
+      ],
+      "same_class": true,
+      "exact": 0.5899656941844978
+    },
+    {
+      "exp": "B",
+      "prep": "minmax",
+      "pair": [
+        6292,
+        6999
+      ],
+      "same_class": true,
+      "exact": 0.6936565826983254
+    },
+    {
+      "exp": "B",
+      "prep": "minmax",
+      "pair": [
+        6292,
+        11387
+      ],
+      "same_class": true,
+      "exact": 0.8209187040896042
+    },
+    {
+      "exp": "B",
+      "prep": "minmax",
+      "pair": [
+        6999,
+        11387
+      ],
+      "same_class": true,
+      "exact": 0.3233133075265082
+    },
+    {
+      "exp": "C",
+      "n_qubits": 2,
+      "pair": [
+        6342,
+        5690
+      ],
+      "self": false,
+      "exact": 0.32305553086011385
+    },
+    {
+      "exp": "C",
+      "n_qubits": 2,
+      "pair": [
+        5690,
+        11254
+      ],
+      "self": false,
+      "exact": 0.48889559468523963
+    },
+    {
+      "exp": "C",
+      "n_qubits": 2,
+      "pair": [
+        11254,
+        3195
+      ],
+      "self": false,
+      "exact": 0.9806411383183349
+    },
+    {
+      "exp": "C",
+      "n_qubits": 2,
+      "pair": [
+        3195,
+        6274
+      ],
+      "self": false,
+      "exact": 0.9818991546807448
+    },
+    {
+      "exp": "C",
+      "n_qubits": 2,
+      "pair": [
+        6274,
+        7592
+      ],
+      "self": false,
+      "exact": 0.9031841471624553
+    },
+    {
+      "exp": "C",
+      "n_qubits": 2,
+      "pair": [
+        7592,
+        8841
+      ],
+      "self": false,
+      "exact": 0.9603195160390284
+    },
+    {
+      "exp": "C",
+      "n_qubits": 2,
+      "pair": [
+        6342,
+        6342
+      ],
+      "self": true,
+      "exact": 1.0
+    },
+    {
+      "exp": "C",
+      "n_qubits": 4,
+      "pair": [
+        6342,
+        5690
+      ],
+      "self": false,
+      "exact": 0.3215825721297707
+    },
+    {
+      "exp": "C",
+      "n_qubits": 4,
+      "pair": [
+        5690,
+        11254
+      ],
+      "self": false,
+      "exact": 0.4833135862624422
+    },
+    {
+      "exp": "C",
+      "n_qubits": 4,
+      "pair": [
+        11254,
+        3195
+      ],
+      "self": false,
+      "exact": 0.9785981399013846
+    },
+    {
+      "exp": "C",
+      "n_qubits": 4,
+      "pair": [
+        3195,
+        6274
+      ],
+      "self": false,
+      "exact": 0.9749719192639085
+    },
+    {
+      "exp": "C",
+      "n_qubits": 4,
+      "pair": [
+        6274,
+        7592
+      ],
+      "self": false,
+      "exact": 0.8944011096487791
+    },
+    {
+      "exp": "C",
+      "n_qubits": 4,
+      "pair": [
+        7592,
+        8841
+      ],
+      "self": false,
+      "exact": 0.9466051167663934
+    },
+    {
+      "exp": "C",
+      "n_qubits": 4,
+      "pair": [
+        6342,
+        6342
+      ],
+      "self": true,
+      "exact": 1.0
+    },
+    {
+      "exp": "C",
+      "n_qubits": 6,
+      "pair": [
+        6342,
+        5690
+      ],
+      "self": false,
+      "exact": 0.3143524518115457
+    },
+    {
+      "exp": "C",
+      "n_qubits": 6,
+      "pair": [
+        5690,
+        11254
+      ],
+      "self": false,
+      "exact": 0.4718035659807294
+    },
+    {
+      "exp": "C",
+      "n_qubits": 6,
+      "pair": [
+        11254,
+        3195
+      ],
+      "self": false,
+      "exact": 0.9406044676672382
+    },
+    {
+      "exp": "C",
+      "n_qubits": 6,
+      "pair": [
+        3195,
+        6274
+      ],
+      "self": false,
+      "exact": 0.9743813200341932
+    },
+    {
+      "exp": "C",
+      "n_qubits": 6,
+      "pair": [
+        6274,
+        7592
+      ],
+      "self": false,
+      "exact": 0.8910753104900484
+    },
+    {
+      "exp": "C",
+      "n_qubits": 6,
+      "pair": [
+        7592,
+        8841
+      ],
+      "self": false,
+      "exact": 0.9372463587479726
+    },
+    {
+      "exp": "C",
+      "n_qubits": 6,
+      "pair": [
+        6342,
+        6342
+      ],
+      "self": true,
+      "exact": 1.0
+    },
+    {
+      "exp": "C",
+      "n_qubits": 8,
+      "pair": [
+        6342,
+        5690
+      ],
+      "self": false,
+      "exact": 0.29167186717063004
+    },
+    {
+      "exp": "C",
+      "n_qubits": 8,
+      "pair": [
+        5690,
+        11254
+      ],
+      "self": false,
+      "exact": 0.4477046580780095
+    },
+    {
+      "exp": "C",
+      "n_qubits": 8,
+      "pair": [
+        11254,
+        3195
+      ],
+      "self": false,
+      "exact": 0.938717923829506
+    },
+    {
+      "exp": "C",
+      "n_qubits": 8,
+      "pair": [
+        3195,
+        6274
+      ],
+      "self": false,
+      "exact": 0.9664187388094586
+    },
+    {
+      "exp": "C",
+      "n_qubits": 8,
+      "pair": [
+        6274,
+        7592
+      ],
+      "self": false,
+      "exact": 0.8825182595291352
+    },
+    {
+      "exp": "C",
+      "n_qubits": 8,
+      "pair": [
+        7592,
+        8841
+      ],
+      "self": false,
+      "exact": 0.9332835000974777
+    },
+    {
+      "exp": "C",
+      "n_qubits": 8,
+      "pair": [
+        6342,
+        6342
+      ],
+      "self": true,
+      "exact": 1.0
+    },
+    {
+      "exp": "C",
+      "n_qubits": 10,
+      "pair": [
+        6342,
+        5690
+      ],
+      "self": false,
+      "exact": 0.29119841672912794
+    },
+    {
+      "exp": "C",
+      "n_qubits": 10,
+      "pair": [
+        5690,
+        11254
+      ],
+      "self": false,
+      "exact": 0.4473820107861663
+    },
+    {
+      "exp": "C",
+      "n_qubits": 10,
+      "pair": [
+        11254,
+        3195
+      ],
+      "self": false,
+      "exact": 0.9310399078076363
+    },
+    {
+      "exp": "C",
+      "n_qubits": 10,
+      "pair": [
+        3195,
+        6274
+      ],
+      "self": false,
+      "exact": 0.9650566647021775
+    },
+    {
+      "exp": "C",
+      "n_qubits": 10,
+      "pair": [
+        6274,
+        7592
+      ],
+      "self": false,
+      "exact": 0.8631096659440806
+    },
+    {
+      "exp": "C",
+      "n_qubits": 10,
+      "pair": [
+        7592,
+        8841
+      ],
+      "self": false,
+      "exact": 0.9083427313346295
+    },
+    {
+      "exp": "C",
+      "n_qubits": 10,
+      "pair": [
+        6342,
+        6342
+      ],
+      "self": true,
+      "exact": 1.0
+    }
+  ]
+}

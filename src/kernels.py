@@ -124,3 +124,18 @@ def onep1q_kernel(SA, SB, chunk=500):
         overlaps = np.einsum("aik,bik->abi", SA[start:start + chunk].conj(), SB)
         out[start:start + chunk] = np.prod(np.abs(overlaps) ** 2, axis=2)
     return out
+
+
+def amplitude_kernel_padded(A, B, c):
+    """Amplitude encoding with a constant extra component c before normalisation (Schuld et al. 2020):
+    |psi_c(x)> = (x, c) / sqrt(||x||^2 + c^2), zero-padded to the next power of two.
+
+    K_c(x, x') = (x.x' + c^2)^2 / ((||x||^2 + c^2)(||x'||^2 + c^2)).
+    Removes the sign/scale ambiguity of plain amplitude encoding (the map is injective for c > 0).
+    c acts as a bandwidth: for c >> ||x|| the kernel approaches exp(-||x - x'||^2 / c^2) and concentrates.
+    Classically, this is a cosine-normalised inhomogeneous degree-2 polynomial kernel.
+    """
+    A, B = np.asarray(A, float), np.asarray(B, float)
+    Ac = np.hstack([A, np.full((A.shape[0], 1), c)])
+    Bc = np.hstack([B, np.full((B.shape[0], 1), c)])
+    return amplitude_kernel(Ac, Bc)
