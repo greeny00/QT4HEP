@@ -4,19 +4,22 @@ Kernels are computed exactly from the encoded state vectors (noiseless statevect
 simulation). For these encodings the overlaps have closed forms:
 
   amplitude:  |psi(x)> = x / ||x||  (zero-padded to 2^n)   ->  K = (x . x')^2 / (||x||^2 ||x'||^2)
-  angle:      |psi(x)> = (x)_i RY(x_i)|0>                  ->  K = prod_i cos^2((x_i - x'_i) / 2)
+  angle:      |psi(x)> = (tensor product over i) RY(x_i)|0> ->  K = prod_i cos^2((x_i - x'_i) / 2)
 
 Notebook 05 cross-checks both against Qiskit Statevector overlaps.
 
-Note: amplitude encoding is blind to the overall sign, |psi(-x)> = -|psi(x)> (a global phase),
-so after centring (standard / robust_yj) jets on opposite sides of the mean map to the same state.
+Note: amplitude encoding is invariant under any nonzero rescaling x -> lambda x (for lambda < 0 up to a
+global phase), so it loses both the norm and the sign of x. After centring (standard / robust_yj), x and -x
+map to the same state; for a balanced training set centred on its own mean, the two class means are exactly
+opposite. amplitude_kernel_padded restores both (notebooks 14-15).
 """
 
 import numpy as np
 from sklearn.preprocessing import MinMaxScaler, PowerTransformer, RobustScaler, StandardScaler
 
 # raw: no preprocessing; standard: zero mean, unit variance; robust_yj: RobustScaler + Yeo-Johnson
-# (both centred, so features change sign); minmax: [0, 1] per feature (equal scales, signs kept positive)
+# (both centred, so features change sign); minmax: [0, 1] per feature on the training set (equal scales;
+# evaluation values can fall slightly outside [0, 1], including below 0)
 PREPROCESSING = ("raw", "standard", "robust_yj", "minmax")
 
 
@@ -40,7 +43,10 @@ def preprocess(name, X_train, *X_other):
 
 
 def amplitude_states(X):
-    """Normalised, zero-padded amplitude-encoded state vectors, shape (n, 2^n_qubits)."""
+    """Normalised, zero-padded amplitude-encoded state vectors, shape (n, 2^n_qubits).
+
+    An all-zero row has no defined state (division by zero gives NaN); it does not occur for these inputs.
+    """
     X = np.asarray(X, float)
     n_qubits = max(1, int(np.ceil(np.log2(X.shape[1]))))
     padded = np.zeros((X.shape[0], 2**n_qubits))
@@ -105,7 +111,8 @@ def entanglement_entropy_2q(states):
 #   theta_i = f * z_i * d_eta_i,   phi_i = f * z_i * d_phi_i,   z_i = pT_i / pT_jet
 #   |psi_i> = RX(phi_i) RY(theta_i) |0>,   |psi(jet)> = tensor product over constituents
 # Missing constituents (padding) have z = 0 and stay in |0>.
-# The paper trains f; here f is fixed and scanned (it plays the role of a kernel bandwidth).
+# The paper trains f, restricted to [1, 2*pi + 1] via f = 1 + 2*pi / (1 + exp(-w)); here f is fixed and scanned
+# (it plays the role of a kernel bandwidth). For small angles the kernel is ~ linear in the angles (notebook 15).
 # ---------------------------------------------------------------------------
 
 def onep1q_states(z, d_eta, d_phi, f):

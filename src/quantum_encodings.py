@@ -55,7 +55,7 @@ def amplitude_encoding_circuit(x):
 
 
 def angle_encoding_circuit(theta):
-    """One qubit per feature, RY(theta_i)|0>. Features must already be scaled to [0, pi]."""
+    """One qubit per feature, RY(theta_i)|0>. Angles are used as given (the kernel experiments pass preprocessed features directly)."""
     from qiskit import QuantumCircuit
 
     theta = np.asarray(theta, dtype=np.float64)

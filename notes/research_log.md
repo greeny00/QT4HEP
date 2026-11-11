@@ -53,3 +53,43 @@ Decisions: inputs = 3 CMS QGL variables (QG_mult, QG_ptD, QG_axis2); abstract's 
   - A: readout floor P(01) 0.0013, P(10) 0.0077; eta/phi amplitudes (1e-7 to 2e-3) measured as 3e-3 to 1e-2: buried in noise; mass amplitude (0.009-0.04) reproduced within ~0.005
   - B: raw amplitude: exact K range 0.993-1.000 (width 0.007), hardware 0.980-0.992 (offset ~0.011), r = 0.92; min-max: exact 0.20-0.99, hardware 0.24-0.98, r = 0.999, slope 0.95
   - C: rotation-invariant 1P1Q self-overlap (ideal 1) vs qubits: 2q 0.989, 4q 0.976, 6q 0.958, 8q 0.949, 10q 0.929; measured/exact for different jets 1.00 at 2q to 0.92 at 10q
+
+## 2026-11-11 — Session 5: pT-reweighted evaluation (MC_10) and constant-padding test (MC_8)
+
+Decision: the headline metric is the pT-reweighted AUC (gluon jets reweighted to the quark pT spectrum). Inclusive AUC is reported only as a secondary number.
+
+- pT-binned comparison (nb 13, confirmation file MC_10, 5 seeds, 400 training jets): dev/confirmation shared events 0; 20 jets without QGL value dropped
+  - Check: AUC of jet pT itself, inclusive 0.667, reweighted 0.500
+  - pT-reweighted AUC: CMS QGL 0.790; amplitude min-max (1000 shots) 0.770 ± 0.005; amplitude raw (exact) 0.766 ± 0.010; amplitude raw (1000 shots) 0.755 ± 0.005 (inclusive 0.688); RBF-SVM 0.755 ± 0.018; angle robust_yj (1000 shots) 0.752 ± 0.008; BDT 0.737 ± 0.014; QG_axis2 alone 0.695
+  - Paired bootstrap (test jets only, seed spread not included), reweighted: min-max - RBF +0.015 [0.015, 0.016]; min-max - QGL -0.020; min-max - raw (both 1000 shots) +0.016; min-max - axis2 alone +0.075
+  - Correction of Session 4: the ~0.10 inclusive AUC drop of raw amplitude at 1000 shots is mostly a pT-composition effect. Pure shot cost (raw exact -> 1000 shots) is ~0.011 reweighted; raw vs min-max ~0.016. Inclusive AUC can bias a model up (RBF 0.791 -> 0.755) or down (raw amplitude 0.688 -> 0.755)
+  - Not yet re-checked with reweighting: the nb 11 statement that exact-tuned models collapse at finite shots. Do not claim it until re-checked
+- Constant-padding cause test (nb 14, third untouched file MC_8, 84498 jets, quark fraction 0.373, shared events with dev 0, 10 seeds)
+  - Protocol: src/kernels.py (amplitude_kernel_padded) committed in 1b38d66 before the run. The notebook itself was NOT included in that commit; its cell sources were verified (MD5 of all cell sources) to be identical to the version written before the run
+  - Check: AUC of jet pT, inclusive 0.667, reweighted 0.501
+  - pT-reweighted AUC (mean ± std over seeds): standardised zero-pad 0.622 ± 0.019 (exact) / 0.622 ± 0.016 (1000 shots); standardised c-pad 0.754 ± 0.014 / 0.758 ± 0.012; min-max zero-pad 0.763 ± 0.009 / 0.761 ± 0.013; min-max c-pad 0.758 ± 0.013 / 0.754 ± 0.011; classical RBF-SVM (standardised) 0.749 ± 0.016
+  - Paired over seeds (same training subsample): standardised c-pad - zero-pad +0.132 (exact) / +0.136 (1000 shots), positive in 10/10 seeds; min-max zero-pad - RBF +0.015 (exact) / +0.013 (1000 shots), positive in 8/10 seeds; min-max c-pad - zero-pad -0.005 (3/10 seeds positive)
+  - Prediction ("padding recovers standardised inputs to the level of min-max / RBF-SVM") confirmed. Min-max inputs are all positive, so they have no sign problem and padding does not help them
+  - Kernel off-diagonal variance is lower for c-pad (2.2e-2) than for zero-pad (1.0e-1) although c-pad performs much better: kernel variance alone does not predict performance at 2 qubits
+  - Note: the c-padded amplitude kernel equals a normalised degree-2 polynomial kernel, (x.x' + c^2)^2 / ((|x|^2 + c^2)(|x'|^2 + c^2)). It is classically computable; no quantum-advantage claim
+
+### 2026-11-11 — Corrections after the independent review (all numbers re-checked against results/*.json)
+
+Framing decision: the poster is about preparing jet data for quantum circuits (what goes wrong, how to detect it, how to fix it). The classical RBF-SVM is a reference, not a competitor; the comparison is stated as "comparable".
+
+- Uncertainties: the nb 13 paired-bootstrap intervals exclude training-sample (seed) variance, which dominates. Seed-paired reweighted differences, min-max amplitude (1000 shots) - RBF-SVM: MC_10 +0.025, -0.002, +0.003, +0.031, +0.020 (mean +0.015, SE 0.006, 4/5 positive; inclusive +0.003); MC_8 +0.015 / +0.013 (SE 0.003-0.004, 8/10 positive). Do not quote [0.015, 0.016]
+- Session 4, 1P1Q "AUC 0.50-0.51 at published f" was obtained with C = 1. Concentration is not the full explanation: for small angles the kernel is to leading order linear in the signed angles f z dEta, f z dPhi, which carry almost no q/g information by symmetry; the invariant variant's linear term (sum z dR) is girth-like. Tested with tuned C in nb 15
+- Bal et al. restrict f to [1, 2pi + 1]; their trained f = 7.27 sits at the upper limit, for top-vs-QCD with a VQC
+- Grid edges: raw amplitude exact C = 1e6 in 3/5 seeds and 1P1Q original f = 316 in 3/5 seeds (nb 10); the concentration cost (~0.011 reweighted) is a lower bound. Fits stopping at MAX_ITER were not counted before nb 15
+- Hardware A: the empty reference circuit was transpiled separately (no fixed initial_layout) and shows more '10' outcomes (31/4000) than any jet circuit (11-18/4000), so it is not the readout floor of the jet circuits. Correct statement: eta/phi probabilities (1e-7 to 2e-3) are below the total gate + readout error (~3e-3 to 1e-2)
+- Hardware B: raw amplitude offset (~0.011) exceeds the whole exact range (0.993-1.000); Pearson 0.92, Spearman 0.70, 28 pairs from 8 jets. Min-max: Pearson 0.999, slope 0.95, intercept 0.03
+- Hardware C: product states of single-qubit RY rotations, no two-qubit gates; without a barrier the transpiler merges RY(theta) RY(-theta'). C measures readout scaling of the all-zeros outcome with qubit number, not circuit noise
+- Sign blindness: for a balanced training subsample standardised on itself the class means are exactly opposite (mu_q = -mu_g). Constant padding restores sign and norm together; nb 15 separates them. k = 8 (grid edge) chosen in 4/10 exact seeds in nb 14
+- nb 14: min-max c-pad - zero-pad at 1000 shots is -0.007 (1/10 positive); the notebook was not part of commit 1b38d66 (see Session 5)
+- jetQGl conditions on pT, eta, rho; the three-input models do not, so the reweighted gap to jetQGl (-0.020, MC_10 only) is not a like-for-like encoding comparison. The reweighted metric was chosen after seeing MC_10
+- All inclusive AUCs refer to the unweighted sample, flat in generator pT-hat (eventWeight not used)
+- Hyperparameters in nb 10-14 were tuned on inclusive CV AUC; nb 15 tunes on pT-reweighted CV AUC
+- Finite-shot training kernels are not positive semidefinite and are passed to the SVM without projection
+- Std convention: nb 10-11 (Session 4) ddof = 0; nb 13-15 ddof = 1
+- All kernels used are classically computable in closed form; no quantum-advantage claim anywhere
+- Not re-checked: nb 11 "exact-tuned models collapse at finite shots" (inclusive AUC only); do not quote

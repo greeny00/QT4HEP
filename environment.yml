@@ -20,4 +20,5 @@ dependencies:
       - uproot==5.7.7
       - awkward==2.14.0
       - cernopendata-client==1.0.2
+      - qiskit-ibm-runtime          # IBM hardware (notebook 12); pin the installed version: pip show qiskit-ibm-runtime
       - ipykernel

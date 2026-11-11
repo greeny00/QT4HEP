@@ -26,7 +26,18 @@
   year         = {2019},
   doi          = {10.7483/OPENDATA.CMS.RY2V.T797},
   url          = {https://opendata.cern.ch/record/12100},
-  note         = {Main dataset (record 12100). File used: JetNtuple_RunIISummer16_13TeV_MC_1.h5. Pythia 8 + full CMS detector simulation, AK4 CHS jets, pT > 30 GeV, |eta| < 2.5. Labels: isPhysUDS / isPhysG (quark/gluon).}
+  note         = {Main dataset (record 12100). Files used: JetNtuple_RunIISummer16_13TeV_MC_1.h5 (development), _MC_10.h5 (confirmation), _MC_8.h5 (third file). The sample is flat in generator pT-hat; eventWeight is not used. Pythia 8 + full CMS detector simulation, AK4 CHS jets, pT > 30 GeV, |eta| < 2.5. Labels: isPhysUDS / isPhysG (quark/gluon).}
+}
+
+@techreport{cms2013qgl,
+  author      = {{CMS Collaboration}},
+  title       = {Performance of quark/gluon discrimination in 8 {TeV} pp data},
+  institution = {CERN},
+  type        = {CMS Physics Analysis Summary},
+  number      = {CMS-PAS-JME-13-002},
+  year        = {2013},
+  url         = {https://cms-results.web.cern.ch/cms-results/public-results/preliminary-results/JME-13-002/index.html},
+  note        = {Reference for the CMS quark/gluon likelihood (jetQGl) and its inputs QG_mult, QG_ptD, QG_axis2, as cited by record 12100. jetQGl is built in bins of pT, eta and rho.}
 }
 
 
