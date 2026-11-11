@@ -93,3 +93,22 @@ Framing decision: the poster is about preparing jet data for quantum circuits (w
 - Std convention: nb 10-11 (Session 4) ddof = 0; nb 13-15 ddof = 1
 - All kernels used are classically computable in closed form; no quantum-advantage claim anywhere
 - Not re-checked: nb 11 "exact-tuned models collapse at finite shots" (inclusive AUC only); do not quote
+
+### 2026-11-11 — Data-preparation diagnostics (nb 15)
+
+Protocol committed with the notebook in cdeb471 before the run. Train MC_1 (balanced 400 jets), evaluate MC_8 (used before in nb 14), C (and f, k, s, c) chosen by 5-fold CV with pT-reweighted AUC; mean ± std (ddof = 1). SVM fits stopped at MAX_ITER: part A 840/10120 (8 %), part B 3645/10580 (34 %).
+
+- A, 1P1Q angle scale (5 seeds, N = 10 constituents), pT-reweighted AUC:
+  - Classical references: linear on signed angles (z dEta, z dPhi) 0.502; linear on z dR 0.604; untrained sum z dR 0.603
+  - Original 1P1Q, 1000 shots: 0.500-0.507 for f <= 10 (equal to the linear signed-angle reference); 0.535 at f = 21.5, 0.588 at f = 100, 0.603 at f = 215. Exact kernels: 0.525-0.576 for f <= 10, reached only with C = 1e4-1e7. At f = 7.27 (Bal et al.): exact 0.574, 1000 shots 0.504; median |angle| 0.012 rad
+  - Invariant 1P1Q, exact: 0.596-0.606 for f <= 464 (equal to the linear z dR reference); 1000 shots: 0.542 at f = 1, 0.58-0.60 for f >= 2
+  - CV-selected f: original exact 0.598 ± 0.011, 1000 shots 0.590 ± 0.016 (f 100-1000); invariant exact 0.597 ± 0.007, 1000 shots 0.574 ± 0.025
+  - Prediction (written before the run, revised after a synthetic test only) confirmed: at small angles the kernel acts as a linear classifier in the angles; at 1000 shots the original 1P1Q is random until the angles reach ~0.1 rad. No 1P1Q kernel exceeds the untrained sum z dR (0.603), far below the three QGL variables (~0.77)
+- B, sign or norm (10 seeds, standardised inputs, exact), pT-reweighted AUC:
+  - Class-mean cosine after standardisation: -1.0 in 10/10 seeds (exactly opposite)
+  - zero-pad 0.603 ± 0.061; norm kept / sign lost (3 qubits) 0.677 ± 0.015; sign kept / norm lost 0.753 ± 0.010; c-pad 0.767 ± 0.009; min-max zero-pad 0.768 ± 0.010
+  - Paired: sign-only - zero-pad +0.150 (SE 0.020, 10/10); norm-only - zero-pad +0.073 (SE 0.019, 10/10); c-pad - sign-only +0.014 (SE 0.003, 10/10)
+  - Prediction "norm-only stays near the zero-pad level" refuted: the norm also carries information. The sign is the larger factor (+0.150 of the +0.164 total recovery); the two effects overlap
+  - c-pad vs k: 0.715 at k = 0.1, 0.736 at 0.5, 0.756 at 1, plateau 0.769 for k >= 2. Most of the recovery already happens at small c, far from the RBF limit
+  - Tuning on pT-reweighted CV gives c-pad 0.767 and min-max 0.768 (nb 14, tuned on inclusive CV: 0.754 and 0.763)
+- C, saved IBM results: raw amplitude Pearson 0.923, Spearman 0.702, slope 1.33, intercept -0.34, mean offset 0.0105 (exact range width 0.007), 8 jets; min-max Pearson 0.999, Spearman 0.997, slope 0.951, intercept 0.031. Experiment A: the reference circuit shows 31/4000 '10' counts, jet circuits 11-18; Poisson probability of so few counts on the same qubits <= 9e-4 for every jet circuit
