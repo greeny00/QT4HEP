@@ -3,7 +3,6 @@
 Zeynep Sağlam · Istanbul Technical University, Department of Physics Engineering
 Supervisor: Altan Çakır
 
-Working repository for the CERN QT4HEP poster (24 November 2026) and the MSc thesis.
 How jet data must be prepared before it is encoded in a quantum circuit, and what goes wrong otherwise:
 scale dominance of raw amplitude encoding, sign blindness after centring (and its repair by constant padding),
 the angle scale of one-particle-one-qubit (1P1Q) encodings, finite-shot effects, pT-composition effects on the
